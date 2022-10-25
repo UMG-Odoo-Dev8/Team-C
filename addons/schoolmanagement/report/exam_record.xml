@@ -1,0 +1,25 @@
+<odoo>
+ <record id="exam_report" model="ir.actions.report">
+  <field name="name">Exam Report</field>
+  <field name="model">appointment.model</field>
+  <field name="report_type">qweb-pdf</field>
+  <field name="report_name">schoolmanagement.report_exam</field>
+  <field name="report_file">schoolmanagement.report_exam</field>
+  <field name="binding_model_id" ref="model_appointment_model"/>
+  <field name="binding_type">report</field>
+ </record>
+
+ <template id="report_exam">
+   <t t-call="web.html_container">
+    <t t-foreach="docs" t-as="o">
+      <center>
+       <h1>Exam Report</h1>
+      </center>
+      <br><span t-field="o.subject_id"></span></br>
+      <br><span t-field="o.teacher"></span></br>
+      <br><span t-field="o.school_exam_line"></span></br>
+      <br><br><a href="http://wkhtmltopdf.org/" target="_blank">wkhtmltopdf.org</a></br></br>
+    </t>
+   </t>
+ </template>
+</odoo>

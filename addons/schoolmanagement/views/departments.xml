@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!--form view in odoo-->
+   
+   <record id="student_model_action" model="ir.actions.act_window">
+      <field name="name">School Management</field>
+      <field name="res_model">school.model</field>
+      <field name="view_mode">tree,form,graph,kanban,calendar,pivot</field>
+      <field name="domain">[('role','=','student')]</field>
+
+   </record>
+   <record id="teacher_model_action" model="ir.actions.act_window">
+      <field name="name">Teacher Management</field>
+      <field name="res_model">school.model</field>
+      <field name="view_mode">tree,form,graph,kanban,calendar,pivot</field>
+      <field name="domain">[('role','=','teacher')]</field>
+   </record>
+   
+        
+   
+   
+</odoo>

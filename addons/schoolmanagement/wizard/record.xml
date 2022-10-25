@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="exam_student_record_view_form" model="ir.ui.view">
+    <field name="name">Exam Student Record</field>
+    <field name="model">exam.student.record</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                <field name="student_id" />
+                    
+                </group>
+                <footer>
+            <button name="action_record" string="Record" type="object" class="btn_secondary" data-hotkey="q"/>
+            <button special="cancel" string="Discard"  class="btn_primary" data-hotkey="z"/>
+            </footer>
+            </sheet>
+            
+            
+        </form>
+    </field>
+</record>
+
+
+    <record id="exam_student_record_action" model="ir.actions.act_window">
+        <field name="name">Exam Student Record</field>
+        <field name="res_model">exam.student.record</field>
+        <field name="view_mode">tree,form</field>
+        
+        
+    </record>
+
+</odoo>

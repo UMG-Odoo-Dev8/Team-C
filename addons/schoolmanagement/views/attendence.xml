@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="attendence_view_form" model="ir.ui.view">
+      <field name="name">Attendence Form</field>
+      <field name="model">attendence.model</field>
+      <field name="arch" type="xml">
+         <form string="">
+            <sheet>
+               <group>
+                  <field name="section_name" />
+                  <field name="date" />
+               </group>
+               <notebook>
+                  <page string="Attendence Info:">
+                     <field name="student_ids">
+                        <tree editable="bottom">
+                           <field name="student_id" domain="[('role','=','student')]" />
+                           <field name="roll_no" />
+                           <field name="attendence" />
+                           <field name="attendence_id" invisible="1" />
+                        </tree>
+                     </field>
+                  </page>
+               </notebook>
+            </sheet>
+         </form>
+      </field>
+   </record>
+   <record id="attendence_action" model="ir.actions.act_window">
+      <field name="name">Student Attendence</field>
+      <field name="res_model">attendence.model</field>
+      <field name="view_mode">tree,form</field>
+   </record>
+</odoo>

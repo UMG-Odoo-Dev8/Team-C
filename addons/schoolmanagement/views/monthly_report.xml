@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="monthly_report_view_form" model="ir.ui.view">
+        <field name="name">Monthly Report</field>
+        <field name="model">monthly.report</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                      <field name="section_name" />
+                      <field name="monthly" />
+                       
+                        
+                    </group>
+                     <notebook>
+                  <page string="Monthly Report:">
+                     <field name="attendence_line_ids">
+                        <tree editable="bottom">
+                           <field name="roll_no" />
+                           <field name="student_name" />
+                           <field name="total_present" />
+                           <field name="rollcall_percent" />
+                           <!-- <field name="remark" /> -->
+                           
+                           <field name="attendence_line_id" invisible="1" />
+                        </tree>
+                     </field>
+                  </page>
+               </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="monthly_report_action" model="ir.actions.act_window">
+        <field name="name">Monthly Report</field>
+        <field name="res_model">monthly.report</field>
+        <field name="view_mode">tree,form</field>
+        
+            
+        
+    </record>
+
+</odoo>
