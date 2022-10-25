@@ -28,42 +28,46 @@ School management system is very convenient for checking students' roll-call per
 ## Custom Module Installation
 To run this system you need to install our custom module in odoo version 15. By clicking install button you can easily access this system.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![install](./img/install.png)
 
 ## Operation
 
 ### Create Data
 Go To ***Department*** menu and click create button to create new data.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![install](./img/create.png)
 
 Choose role like teacher or student. If teacher, you can select teacher role like principal, teacher and teacher head.<br>
 Create new student
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![create](./img/create_student.png)
 
 Create new teacher
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![create](./img/create_teacher.png)
 
-Can see same role in a collection by chosing this options
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Can see same role in a collection by chosing these menuitems and options
+![create](./img/group_by.png)
 
 ### Add Data into Sections
-To create new section go to ***Section*** menu. A section can have one teacher head, many teachers and many students. You need to define students' roll numbers 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+To create new section go to ***Section*** menu. A section can have one teacher head, many teachers and many students.
+![section](./img/section.png)
+![section](./img/section_create.png)
 
 ### Create Attendance
 For creating new attendance record Go to > Student Attendance > Attendance Record. 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![attendance](./img/attendance.png)
+![attendance](./img/attendance_create.png)
 ### Monthly Report
 Go to > Attendance > Monthly Attendance to view monthly attendance of each section
+![attendance](./img/monthly_attendance.png)
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-
 ### Create Exam Questions
-
+Go to ***Exam Question*** menu, write questions and define correct answers.Can hide some questions that do not want to show in exam form view by removing check mark  in the active column .
+![question](./img/question.png)
+![question](./img/question_create.png)
+![question](./img/question_hide.png)
 
 ### Test Exam and Generate Result
-To answer exam questions go to ***Exam*** menu. Choose course in the status bar. Students whose roll-call precentage is at least 75% can answer exam.
+To answer exam questions go to ***Examination*** menu. Choose course in the status bar. Students whose roll-call precentage is at least 75% can answer exam.
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 After selecting course, you can answer questions. And then, click submit button to see your result.

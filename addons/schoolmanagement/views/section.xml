@@ -9,8 +9,8 @@
                
                <group>
                   <field name="section_name" />
-                  <field name="teacher_id" domain="[('role','=','teacher')]" />
-                  <field name="teacher" widget="many2many_tags" domain="[('role','=','teacher')]" />
+                  <field name="teacher_id" domain="[('role','=','teacher'),('teacher_role','=','teacher_head')]" />
+                  <field name="teacher" widget="many2many_tags" domain="[('role','=','teacher'),('teacher_role','=','teacher')]" />
                </group>
                <notebook>
                   <page string="Student Info:">
@@ -43,7 +43,7 @@
    </record>
    <!--school action-->
    <record id="school_subject_action" model="ir.actions.act_window">
-      <field name="name">School Subject</field>
+      <field name="name">Sections</field>
       <field name="res_model">subject.model</field>
       <field name="context" />
       <!--default context-->

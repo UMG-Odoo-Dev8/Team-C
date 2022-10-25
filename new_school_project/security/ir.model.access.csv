@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_school_project,school.project,model_school_project,,1,1,1,1
-access_school_section,school.section,model_school_section,,1,1,1,1
-access_school_section_line,school.section.line,model_school_section_line,,1,1,1,1
-access_school_attendance,school.attendance,model_school_attendance,,1,1,1,1
-access_school_attendance_line,school.attendance.line,model_school_attendance_line,,1,1,1,1
-access_school_rollcall,school.rollcall,model_school_rollcall,,1,1,1,1
-access_rollcall_line,rollcall.line,model_rollcall_line,,1,1,1,1
