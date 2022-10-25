@@ -33,8 +33,8 @@ To run this system you need to install our custom module in odoo version 15. By 
 ## Operation
 
 ### Create Data
-Go To ***Department*** menu and click create button to create new data.
-![install](./img/create.png)
+Go To ***School*** main menu and click create button to create new data.
+![create](./img/create.png)
 
 Choose role like teacher or student. If teacher, you can select teacher role like principal, teacher and teacher head.<br>
 Create new student
@@ -52,23 +52,23 @@ To create new section go to ***Section*** menu. A section can have one teacher h
 ![section](./img/section_create.png)
 
 ### Create Attendance
-For creating new attendance record Go to > Student Attendance > Attendance Record. 
+For creating new attendance record Go to > Attendance > Roll call. 
 ![attendance](./img/attendance.png)
 ![attendance](./img/attendance_create.png)
 ### Monthly Report
-Go to > Attendance > Monthly Attendance to view monthly attendance of each section
-![attendance](./img/monthly_attendance.png)
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+Go to > Attendance > Monthly Report to view monthly attendance of each section
+![attendance](./img/monthly.png)
+![attendance](./img/monthly_create.png)
 
 ### Create Exam Questions
 Go to ***Exam Question*** menu, write questions and define correct answers.Can hide some questions that do not want to show in exam form view by removing check mark  in the active column .
-![question](./img/question.png)
-![question](./img/question_create.png)
-![question](./img/question_hide.png)
+![question](./img/exam.png)
+![question](./img/exam_create.png)
+![question](./img/exam_hide.png)
 
 ### Test Exam and Generate Result
-To answer exam questions go to ***Examination*** menu. Choose course in the status bar. Students whose roll-call precentage is at least 75% can answer exam.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+To answer exam questions go to ***Examination*** menu and choose subject. Students whose roll-call precentage is at least 75% can answer exam.
+![result](./img/answer.png)
 After selecting course, you can answer questions. And then, click submit button to see your result.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![result](./img/answer_create.png)
+![result](./img/answer_submit.png)
