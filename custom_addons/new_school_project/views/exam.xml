@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="exam_subject_view_form" model="ir.ui.view">
+      <field name="name">Exam Subjects</field>
+      <field name="model">exam.model</field>
+      <field name="arch" type="xml">
+         <form string="">
+            <sheet>
+               <group>
+                  <field name="subject" />
+               </group>
+               <notebook>
+                  <page string="Exam Question:">
+                     <field name="question_ids">
+                        <tree editable="bottom">
+                           <field name="qno" />
+                           <field name="question" />
+                           <field name="answer" />
+                           <!-- <field name="remark" /> -->
+                           <field name="active" />
+                           <!-- <field name="major" /> -->
+                           <field name="question_id" invisible="1" />
+                        </tree>
+                     </field>
+                  </page>
+               </notebook>
+            </sheet>
+         </form>
+      </field>
+   </record>
+   <record id="exam_subject_action" model="ir.actions.act_window">
+      <field name="name">Exam Subject</field>
+      <field name="res_model">exam.model</field>
+      <field name="view_mode">tree,form</field>
+   </record>
+   <menuitem id="e_menu" 
+   name="Exam Question" 
+   action="exam_subject_action"
+   parent="school_root_menu" 
+   sequence="26" />
+</odoo>
