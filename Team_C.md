@@ -47,7 +47,7 @@ Can see same role in a collection by chosing these menuitems and options
 ![create](./img/group_by.png)
 
 ### Add Data into Sections
-To create new section go to ***Section*** menu. A section can have one teacher head, many teachers and many students.
+To create new section go to ***Section*** menu. A section can have one teacher head, many teachers and many students. Need to insert students' roll numbers.
 ![section](./img/section.png)
 ![section](./img/section_create.png)
 
