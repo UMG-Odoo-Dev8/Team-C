@@ -1,3 +1,4 @@
+import string
 from odoo import fields,models,api
 
 class SchoolSection(models.Model):
@@ -8,6 +9,7 @@ class SchoolSection(models.Model):
     # section_name = fields.Selection([('section_a','Section-A'),('section_b','Section-B'),('section_c','Section-C')],string = "Section Name:")
     name = fields.Char("Section Name")
     teacher_head = fields.Many2one("school.project",string="Teacher Head:",domain="[('teacher_role','=','teacher_head')]")
+    teacher_ids = fields.Many2many("school.project",string="Teacher",domain="[('role','=','teacher'),('teacher_role','=','teacher')]")
 
     section_line =fields.One2many('school.section.line', 'section_id', string='School Section Line')
 

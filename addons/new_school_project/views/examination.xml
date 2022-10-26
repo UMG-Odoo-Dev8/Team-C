@@ -9,7 +9,7 @@
                <button string="Submit" name="submit_result" type="object" class="oe_highlight"/>
                <group>
                   <group>
-                     <field name="roll_no"/>
+                     <field name="roll_num" domain="[('permit','=','Accessed')]"/>
                      <field name="name" />
                      <field name="exam_date"/>
                   </group>

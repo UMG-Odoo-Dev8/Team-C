@@ -44,6 +44,7 @@
                                     <field name="total_attendance" />
                                     <!-- <field name="total_absent" /> -->
                                     <field name="rollcall_percent" widget="percentage"/>
+                                    <field name="permit" />
                                 </tree>
                             </field>
                         </page>

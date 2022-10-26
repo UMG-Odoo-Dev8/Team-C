@@ -5,20 +5,25 @@ class SubjectExam(models.Model):
      _name='examination.model'
     
      _description='hello Examination'
+     _rec_name="section_name"
      
     
      roll_no=fields.Many2one('school.section.line',string="Roll No")
+     roll_num=fields.Many2one('school.attendance.line',string="Roll_No")
+     
      name = fields.Char("Student Name")
-     section_name=fields.Many2one("school.section","Section")
+     section_name=fields.Char("Section")
      subject= fields.Many2one('exam.model', string='Subject')
      exam_date=fields.Datetime("Exam DateTime")
      question_ids=fields.One2many('equestion.model','question_id',string='Exam Question')
      default_value=fields.Char("Marks")
      status=fields.Char("Status")
       
-     @api.onchange('roll_no')
-     def onchange_roll_no(self):
-        self.name=self.roll_no.student_name.name
+     @api.onchange('roll_num')
+     def onchange_roll_num(self):
+        self.name=self.roll_num.student_name
+        self.section_name=self.roll_num.attendance_line_id.section_name.name
+
      
      @api.onchange('subject')
      def onchange_subject(self):

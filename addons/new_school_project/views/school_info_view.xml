@@ -26,6 +26,9 @@
         <field name="model">school.project</field>
         <field name="arch" type="xml">
             <form string="">
+            <header>
+                <field name="role" widget="statusbar" nolabel="1" options="{'clickable':'1'}" statusbar_visible="student,teacher" />       
+            </header>
                 <sheet>
                     <group >
                         <group>
@@ -39,7 +42,7 @@
                             <field name="ph_no"/>
                             <field name="address"/>
                             <field name="gender" widget="radio" options="{'horizontal':True}"/>
-                            <field name="role" widget = "selection" required ="True"/>
+                            
                             <field name="teacher_role" widget="radio" required="True" attrs="{'invisible':[('role','=','student')]}"/>
                         </group>
                     </group>
