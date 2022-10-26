@@ -32,6 +32,7 @@
       <field name="name">Exam Subject</field>
       <field name="res_model">exam.model</field>
       <field name="view_mode">tree,form</field>
+      <field name="context">{'active_test':False}</field>
    </record>
    <menuitem id="e_menu" 
    name="Exam Question" 

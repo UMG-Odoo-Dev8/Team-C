@@ -1,5 +1,5 @@
 {
-    'name':"New School Project",
+    'name':"New School Project12",
     'license':'LGPL-3',
     'sequence' : '-100',
     'author':'TES',

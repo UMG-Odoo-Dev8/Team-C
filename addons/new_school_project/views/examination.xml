@@ -45,7 +45,7 @@
       <field name="model">examination.model</field>
       <field name="arch" type="xml">
          <tree string="">
-           <field name="roll_no" />
+           <field name="roll_num" />
             <field name="name" />
             <field name="exam_date"/>
                  
