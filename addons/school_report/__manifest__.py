@@ -4,7 +4,7 @@
     'sequence' : '-100',
     'author':'PWk',
     'depends':[
-        'base'
+        'new_school_project'
     ],
     'data': [
         
