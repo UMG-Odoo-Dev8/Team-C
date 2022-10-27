@@ -7,6 +7,7 @@
         'new_school_project'
     ],
     'data': [
-        
+        'report/examination_report.xml',
+   
     ]
 }

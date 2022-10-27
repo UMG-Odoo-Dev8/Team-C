@@ -1,0 +1,66 @@
+<odoo>
+ <record id="examination_report" model="ir.actions.report">
+  <field name="name">Examination Report</field>
+  <field name="model">examination.model</field>
+  <field name="report_type">qweb-pdf</field>
+  <field name="report_name">school_report.report_examination</field>
+  <field name="report_file">school_report.report_examination</field>
+  <field name="binding_model_id" ref="model_examination_model"/>
+  <field name="binding_type">report</field>
+ </record>
+
+ <template id="report_examination">
+   <t t-call="web.html_container">
+    <t t-foreach="docs" t-as="o">
+    <!-- <t t-call="web.external_layout"> -->
+    <div>
+        <style>
+        table,td,th,tr{
+            border: 1pt solid grey;
+            border-radius:1pt;
+            <!-- margin:50px 50px 50px 100px; -->
+        }
+        
+        </style>
+      <center>
+       <h2>Student Exam Report</h2>
+      </center>
+      <div class="page">
+      <!-- <p>Roll No : </p> </p>
+      <p>Name : <span t-field="o.name"></span></p>
+      <p>Name : <span t-field="o.name"></span></p>
+      <p>Exam_Date : <span t-field="o.exam_date"></span></p>
+      <p>Remark : <span t-field="o.default_value"></span></p>
+      <p>Status : <span t-field="o.status"></span></p> -->
+       
+        <br><table style="width:100%">
+            <tr style="height:50px">
+                <th ><center>Roll No</center></th>
+                <th ><center>Name</center></th>
+                <th ><center>Section Name</center></th>
+                <th ><center>Subject</center></th>
+                <th ><center>Exam_Date</center></th>
+                <th ><center>Remark</center></th>
+                <th ><center>Status</center></th>
+            </tr>
+            <tr>
+                <td><span t-field="o.roll_num"></span></td>
+                <td><span t-field="o.name"></span></td>
+                <td><span t-field="o.section_name"></span></td>
+                <td><span t-field="o.subject"></span></td>
+                <td><span t-field="o.exam_date"></span></td>
+                <td><span t-field="o.default_value"></span></td>
+                <td><span t-field="o.status"></span></td>
+            </tr>
+    
+        </table></br>
+       
+
+      <br><br><a href="http://wkhtmltopdf.org/" target="_blank"></a></br></br>
+      </div>
+      </div>
+      <!-- </t> -->
+    </t>
+   </t>
+ </template>
+</odoo>

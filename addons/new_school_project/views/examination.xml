@@ -62,6 +62,7 @@
    <record id="examination_action" model="ir.actions.act_window">
       <field name="name">Examination</field>
       <field name="res_model">examination.model</field>
+      <field name="context" />
       <field name="view_mode">tree,form</field>
    </record>
    <menuitem id="examination_menu" name="Examination" action="examination_action" parent="school_root_menu" sequence="27" />
