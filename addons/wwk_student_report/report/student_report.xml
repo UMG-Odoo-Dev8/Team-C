@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_student_report" model="ir.actions.report">
+        <field name="name">Section Data Report</field>
+        <field name="model">school.section</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">wwk_student_report.student_report</field>
+        <field name="report_file">wwk_student_report.student_report</field>
+        <field name="binding_model_id" ref="model_school_section"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="student_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span>
+                                        <strong>Section     </strong>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span> : </span>
+                                </td>
+                                <td>
+                                    <span t-field="o.name"/>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <span>
+                                        <strong>Head Teacher     </strong>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span> : </span>
+                                </td>
+                                <td>
+                                    <span t-field="o.teacher_head"/>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>
+                                    <span>
+                                        <strong>Teachers     </strong>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span> : </span>
+                                </td>
+                                <td>
+                                    <span t-field="o.teacher_ids"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br/>
+                        
+                        <t t-if="o.section_line">
+                            <span>Students</span>
+                            <table class="table table-sm o_main_table" name="section_data">
+                                <thead>
+                                    <tr>
+                                        <th name="th_name" class="text_left">
+                                            <span>Name</span>
+                                        </th>
+                                         <th name="th_roll_num" class="text_left">
+                                            <span>Roll No.</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <t t-foreach="o.section_line" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.student_name.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.roll_no"/>
+                                        </td>
+                                        
+                                    </tr>
+                                </t>
+                            </table>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

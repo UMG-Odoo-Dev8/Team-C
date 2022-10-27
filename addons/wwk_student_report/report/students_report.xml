@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_report_students_report" model="ir.actions.report">
+        <field name="name">Students Report</field>
+        <field name="model">school.project</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">wwk_student_report.students_report</field>
+        <field name="report_file">wwk_student_report.students_report</field>
+        <field name="binding_model_id" ref="model_school_project"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="students_report">
+         <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                  
+                    <div class="page">
+                            <span>Students</span>
+                            <table class="table table-sm o_main_table" name="section_data">
+                                <thead>
+                                    <tr>
+                                        <th name="th_name" class="text_left">
+                                            <span>Name</span>
+                                        </th>
+                                        <th name="th_ph_no" class="text_left">
+                                            <span>Phone Number</span>
+                                        </th>
+                                        <th name="th_address" class="text_left">
+                                            <span>Address</span>
+                                        </th>
+                                        <th name="th_gender" class="text_left">
+                                            <span>Gender</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <t t-foreach="docs" t-as="o">
+                                    <t t-if="o.role=='student'">
+                                        <tr>
+                                            <td>
+                                                <span t-field="o.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="o.ph_no"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="o.address"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="o.gender"/>
+                                            </td>
+                                        </tr>
+                                
+                                    </t>
+                                </t>
+                            </table>
+                    </div>    
+            </t>
+        </t>
+    </template>
+
+</odoo>
